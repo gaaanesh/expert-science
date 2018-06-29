@@ -78,6 +78,14 @@ h3{
     margin-left: 1rem;
     border-radius: .5rem;
 }
+@media only screen and (max-width:600px) {
+	#clock > div {
+	    width: 65px;
+	    height: 60px;
+	    margin-left: .2rem;
+	    margin-right: .2rem;
+	}
+} 
 #clock{
   margin-top: 50px;
 }
