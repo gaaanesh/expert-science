@@ -36,4 +36,4 @@ const countdown = (deadline,elem,finalMessage) => {
   }, 1000)
 };
 
-countdown('July 30 2018 23:05:40 GMT-0500', 'clock', '¡Ya empezó!');
+countdown('September 13 2018 23:05:40 GMT-0500', 'clock', '¡Ya empezó!');
