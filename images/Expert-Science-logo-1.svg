@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1001" height="137" viewBox="0 0 1001 137">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d73163;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #5a94de;
+      }
+
+      .cls-3 {
+        font-size: 32.879px;
+        fill: #fff;
+        font-family: "Eras Bold ITC";
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M12.106-.024H501.778V136.968H12.106A11.659,11.659,0,0,1,.448,125.309V11.635A11.659,11.659,0,0,1,12.106-.024Z"/>
+  <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-2" d="M988.535,136.968H498.863V-0.024H988.535a11.656,11.656,0,0,1,11.655,11.659V125.309A11.656,11.656,0,0,1,988.535,136.968Z"/>
+  <text id="Expert" class="cls-3" transform="translate(49.655 100.503) scale(2.915)">Expert</text>
+  <text id="SCIENCE" class="cls-3" transform="translate(532.655 100.503) scale(2.915)">SCIENCE</text>
+</svg>

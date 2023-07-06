@@ -39,16 +39,16 @@ body{}
 }
 .container{
   /*width: 100%;*/
-  padding-right: 1rem;
-  padding-left: 1rem;
+  /* padding-right: 1rem;
+  padding-left: 1rem; */
   margin-right: auto;
   margin-left: auto;
 }
 
 .logo{
   display: inline-block;
-  width: 450px;
-  max-width: 100%;
+  width: 90%;
+  max-width: 450px;
   height: auto;
   margin: 0 auto 2rem auto;
   overflow: hidden;
@@ -284,3 +284,27 @@ h3{
     -webkit-transform: rotate(-10deg);
     transform: rotate(-9deg);
     z-index: 1;
+}
+.content-row {
+  display: flex;
+}
+
+.content-row .col-1 {
+  width:65%;
+}
+.content-row .col-2 {
+  width:35%;
+}
+@media only screen and (max-width:600px) {
+  h3{
+    font-size: 1.5rem;
+    font-family: Arial;
+    font-weight: bold;
+  }
+  .content-row {
+    display: block;
+  }
+  .content-row .col-1, .content-row .col-2 {
+  width: 100%;
+}
+}
