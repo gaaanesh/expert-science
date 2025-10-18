@@ -36,4 +36,4 @@ const countdown = (deadline,elem,finalMessage) => {
   }, 1000)
 };
 
-countdown('January 26 2022 23:05:40 GMT-0500', 'clock', 'Thank you');
+countdown('November 20 2025 23:05:40 GMT-0500', 'clock', 'Thank you');
