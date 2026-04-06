@@ -16,7 +16,10 @@ p { font-size:15px; }
 .high { background:#e8f5e9; }
 .medium { background:#fff3cd; }
 .low { background:#fdecea; }
-
+.name {
+  color: #1976d2;
+  font-weight: bold;
+}
 .cta {
   display:block;
   text-align:center;
@@ -56,14 +59,14 @@ ul { padding-left:18px; }
 <!-- TITLE -->
 <h1 id="title"></h1>
 <p id="hook"></p>
-<p id="score"></p>
+<p id="score" style="font-size: 20px;"></p>
 
 <!-- RESULT -->
 <div id="resultBox" class="box"></div>
 
 <!-- MID CTA -->
-<a class="cta call" href="tel:YOURNUMBER">📞 Talk to Expert Now</a>
-<a class="cta wa" href="https://wa.me/91YOURNUMBER">💬 Ask on WhatsApp</a>
+<a class="cta call" href="tel:+917219235357">📞 Talk to Expert Now</a>
+<a class="cta wa" href="https://wa.me/917219235357">💬 Ask on WhatsApp</a>
 
 <!-- FEAR TRIGGER -->
 <div class="highlight">
@@ -136,8 +139,8 @@ ul { padding-left:18px; }
 <li>Solve your confusion</li>
 </ul>
 
-<a class="cta call" href="tel:YOURNUMBER">📞 Call Now</a>
-<a class="cta wa" href="https://wa.me/91YOURNUMBER">💬 WhatsApp Now</a>
+<a class="cta call" href="tel:+917219235357">📞 Call Now</a>
+<a class="cta wa" href="https://wa.me/917219235357">💬 WhatsApp Now</a>
 
 <div class="highlight">
 ⏳ Limited seats for personal batches
@@ -152,52 +155,52 @@ ul { padding-left:18px; }
 
 <script>
 const params = new URLSearchParams(window.location.search);
+
 const name = params.get("name") || "Student";
 const score = parseInt(params.get("score")) || 0;
 
 const title = document.getElementById("title");
-const hook = document.getElementById("hook");
 const scoreText = document.getElementById("score");
 const resultBox = document.getElementById("resultBox");
 const actionList = document.getElementById("actionList");
 
-title.innerText = name + ", Read This Carefully";
 scoreText.innerText = "Your Score: " + score + "/100";
 
-// LOGIC
+let hookText = "";
+
 if(score >= 70){
-  hook.innerText = "You have strong potential for Science — right guidance will decide your success.";
+  hookText = "You have strong potential for Science — right guidance will decide your success.";
   resultBox.className = "box high";
-  resultBox.innerHTML = "🚀 You are well suited for Science. Start early and stay consistent.";
+  resultBox.innerHTML = "🚀 You are well suited for Science.";
 
   actionList.innerHTML = `
-  <li>Join structured preparation</li>
-  <li>Start JEE/NEET early</li>
-  <li>Focus on consistency</li>
+    <li>Join structured preparation</li>
+    <li>Start early</li>
   `;
 }
 else if(score >= 40){
-  hook.innerText = "You are at a critical stage — right decision now can change your future.";
+  hookText = "You are at a critical stage — right decision now can change your future.";
   resultBox.className = "box medium";
-  resultBox.innerHTML = "⚡ You can take Science, but need strong discipline and support.";
+  resultBox.innerHTML = "⚡ You can take Science with support.";
 
   actionList.innerHTML = `
-  <li>Build strong basics</li>
-  <li>Follow strict plan</li>
-  <li>Take expert guidance</li>
+    <li>Build basics</li>
+    <li>Follow plan</li>
   `;
 }
 else{
-  hook.innerText = "Wrong decision now can lead to struggle — choose carefully.";
+  hookText = "Wrong decision now can lead to struggle — choose carefully.";
   resultBox.className = "box low";
-  resultBox.innerHTML = "⚠️ Science possible but challenging. Other streams may suit better.";
+  resultBox.innerHTML = "⚠️ Science possible but challenging.";
 
   actionList.innerHTML = `
-  <li>Do not rush decision</li>
-  <li>Explore other streams</li>
-  <li>Talk to expert first</li>
+    <li>Explore options</li>
+    <li>Talk to expert</li>
   `;
 }
+
+// ✅ FINAL TITLE WITH SPAN
+title.innerHTML = `<span class="name">${name},</span> ${hookText}`;
 </script>
 
 </body>
